@@ -1,0 +1,31 @@
+class Main {
+  public static void main(String[] args) {
+    int a,b,k,c=1111111,count=0;
+    String temp = Integer.toString(c);
+	
+	System.out.println(temp.length()/2);
+   System.out.println("(3) "+c);
+    while(c>0)
+    {
+      a=c/10;
+      b=c%10;
+      System.out.println("b="+b);
+      System.out.println("(1)"+a);
+      while(a>0)
+      {
+        k=a%10;
+         System.out.println("(2) "+k);
+        if(k==b && count<= temp.length()-1)
+        count++;
+        System.out.println("count: "+count);
+        a/=10;
+      }
+      c/=10;
+       System.out.println("(3) "+c+"\n");
+    }
+    if(count==temp.length()/2 || count == temp.length())
+    System.out.println("yes \n");
+    else
+    System.out.println("no \n");
+  }
+}
